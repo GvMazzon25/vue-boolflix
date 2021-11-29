@@ -1,11 +1,17 @@
 <template>
   <main>
-      <ul>
-          <li><h4>Titolo:</h4></li>
-          <li>Titolo Originale:</li>
-          <li>Lingua</li>
-          <li>Voto</li>
+      <div
+        v-for="card in cardList"
+        :key="`card${card.id}`"
+        class="card"
+      >
+          <ul>
+          <li><h4>Titolo: {{cardList.title}}</h4></li>
+          <li>Titolo Originale: {{cardList.original_title}}</li>
+          <li>Lingua: {{cardList.original_language}}</li>
+          <li>Voto: {{cardList.popularity}}</li>
       </ul>
+      </div>
   </main>
 </template>
 
