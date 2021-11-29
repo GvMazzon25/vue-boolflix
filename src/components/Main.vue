@@ -5,12 +5,12 @@
          v-for="card in cardList"
          :key="`card${card.id}`"
         >
-            <ul>
-              <li><h3>Titolo: {{card.title}}</h3></li>
-              <li>Titolo Originale: {{card.original_title}}</li>
-              <li>Lingua: {{card.original_language}}</li>
-              <li>Voto: {{card.popularity}}</li>
-            </ul>
+           <Card 
+              :title='card.title'
+              :originalTitle= 'card.original_title'
+              :originalLanguage= 'card.original_language'
+              :vote= 'card.popularity'
+           />
         </div>
       </div>
         <div v-else>Loading...</div>
@@ -19,9 +19,13 @@
 
 <script>
 import axios from 'axios';
+import Card from '@/components/Card.vue'
 
 export default {
     name: 'Main',
+    components: {
+        Card,
+    },
     data() {
       return {
         cardList: null,
