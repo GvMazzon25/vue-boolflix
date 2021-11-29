@@ -6,7 +6,7 @@
          :key="`card${card.id}`"
         >
             <ul>
-              <li><h4>Titolo: {{card.title}}</h4></li>
+              <li><h3>Titolo: {{card.title}}</h3></li>
               <li>Titolo Originale: {{card.original_title}}</li>
               <li>Lingua: {{card.original_language}}</li>
               <li>Voto: {{card.popularity}}</li>
@@ -45,5 +45,5 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
+   @import '@/style/main.scss';
 </style>
