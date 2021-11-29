@@ -1,17 +1,20 @@
 <template>
   <main>
-      <div
-        v-for="card in cardList"
-        :key="`card${card.id}`"
-        class="card"
-      >
-          <ul>
-          <li><h4>Titolo: {{cardList.title}}</h4></li>
-          <li>Titolo Originale: {{cardList.original_title}}</li>
-          <li>Lingua: {{cardList.original_language}}</li>
-          <li>Voto: {{cardList.popularity}}</li>
-      </ul>
-      </div>
+       <div v-if="cardList !== null" class="row">
+            <div
+                v-for="card in cardList"
+                :key="`card${card.id}`"
+            >
+                <ul>
+                    <li><h4>Titolo: {{cardList.title}}</h4></li>
+                    <li>Titolo Originale: {{cardList.id}}</li>
+                    <li>Titolo Originale: {{cardList.original_title}}</li>
+                    <li>Lingua: {{cardList.original_language}}</li>
+                    <li>Voto: {{cardList.popularity}}</li>
+                </ul>
+            </div>
+       </div>
+       <div v-else>Loading...</div>
   </main>
 </template>
 
