@@ -1,6 +1,8 @@
 <template>
   <header>
       <h2>Boolflix</h2>
+      <input type="text">
+      <button>Click</button>
   </header>
 </template>
 
