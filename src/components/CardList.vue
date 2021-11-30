@@ -16,10 +16,9 @@
 
 <script>
 export default {
-    name: 'Card',
+    name: 'CardList',
     props: {
         list: Array,
-
     }
 }
 </script>
