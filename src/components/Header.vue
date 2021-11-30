@@ -3,10 +3,10 @@
       <h2>Boolflix</h2>
       <input type="text" 
              placeholder="Search a movie" 
-             v-model.trim='searchText' 
+             v-model.trim="searchText" 
              @keyup.enter="$emit('search', searchText)"
       />
-      <button @click="$emit('search', searchText)">Click</button>
+      <button @click="$emit('search', searchText)">Search</button>
   </header>
 </template>
 

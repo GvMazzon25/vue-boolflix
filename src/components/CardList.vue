@@ -1,22 +1,27 @@
 <template>
+<section>
   <div class="card" 
        v-for="item in list"
        :key="item.id"
   >
-    <div class="box">
-          <ul>
-                <li><h3>Titolo: {{ item.title }}</h3></li>
-                <li>Titolo Originale: {{ item.originalTitle }}</li>
-                <li>Lingua: {{ item.originalLanguage }}</li>
-                <li>Voto: {{ item.vote }}</li>
-          </ul>
-    </div>
+    <Card 
+         :title='item.title'
+         :originalTitle='item.original_title'
+         :originalLanguage='item.original_language'
+         :vote='item.popularity'
+    />
   </div>
+</section>
 </template>
 
 <script>
+import Card from '@/components/Card.vue'
+
 export default {
     name: 'CardList',
+    components: {
+      Card,
+    },
     props: {
         list: Array,
     }

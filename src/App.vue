@@ -1,14 +1,16 @@
 <template>
 <div class="app">
   <Header />
-  <CardList  :list="movieList"/>
+  <CardList  
+     :list="movieList"
+  />
 </div>
 </template>
 
 <script>
 import axios from 'axios';
-import Header from './components/Header.vue';
-import CardList from './components/CardList.vue';
+import Header from '@/components/Header.vue';
+import CardList from '@/components/CardList.vue';
 
 export default {
   name: 'App',
@@ -29,9 +31,9 @@ export default {
          axios
              .get('https://api.themoviedb.org/3/search/movie', {
                   params: {
-                    api_key: 'e99307154c6dfb0b4750f6603256716',
+                    api_key:'e99307154c6dfb0b4750f6603256716',
                     query: searchText,
-                    language: 'it-IT',
+                    language:'it-IT',
                 },
              })
              .then(result => {

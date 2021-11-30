@@ -6,10 +6,7 @@
          :key="`card${card.id}`"
         >
            <Card 
-              :title='card.title'
-              :originalTitle= 'card.original_title'
-              :originalLanguage= 'card.original_language'
-              :vote= 'card.popularity'
+              
            />
         </div>
       </div>
