@@ -30,6 +30,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scope lang="scss">
+   .card{
+       position: relative;
+       top: 0;
+   }
 </style>

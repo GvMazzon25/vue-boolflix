@@ -10,14 +10,18 @@
     }
     main{
         width: 100%;
+        display: flex;
         .film{
             width: 50%;
-            display: inline-block;
+            height: 90vh;
         }
         .serie{
             width: 50%;
-            display: inline-block;
+            height: 90vh; 
             text-align: end;
+        }
+        .hide{
+            display: none;
         }
     }
 }
