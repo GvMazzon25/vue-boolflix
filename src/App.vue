@@ -1,9 +1,18 @@
 <template>
 <div class="app">
   <Header @search="performSearch"/>
-  <CardList  
-     :list="movieList"
+  <main>
+    <section class="film">
+    <CardList  
+     :list1="movieList"
   />
+  </section>
+  <section class="serie">
+    <SeriesList  
+     :list2="seriesList"
+  />
+  </section>
+  </main>
 </div>
 </template>
 
@@ -11,16 +20,19 @@
 import axios from 'axios';
 import Header from '@/components/Header.vue';
 import CardList from '@/components/CardList.vue';
+import SeriesList from '@/components/SeriesList.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     CardList,
+    SeriesList,
   },
   data() {
     return {
-      movieList: []
+      movieList: [],
+      seriesList: []
     };
   },
   methods: {
@@ -38,10 +50,12 @@ export default {
              })
              .then(result => {
                this.movieList = result.data.results;
+               this.seriesList = result.data.results;
              })
              .catch(err => console.log(err));
       }
-    }
+    },
+    
   }
 }
 </script>

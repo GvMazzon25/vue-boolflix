@@ -1,10 +1,10 @@
 <template>
-<section>
+  <section>
   <div class="card" 
-       v-for="item in list1"
+       v-for="item in list2"
        :key="item.id"
   >
-    <Card 
+    <CardSeries 
          :title='item.title'
          :originalTitle='item.original_title'
          :language='item.original_language'
@@ -14,21 +14,22 @@
 </section>
 </template>
 
+
+
 <script>
-import Card from '@/components/Card.vue'
+import CardSeries from '@/components/CardSeries.vue'
 
 export default {
-    name: 'CardList',
+    name: 'SeriesList',
     components: {
-      Card,
+      CardSeries,
     },
     props: {
-        list1: Array,
+        list2: Array,
     }
 }
 </script>
 
-<style lang='scss'>
+<style>
 
 </style>
-

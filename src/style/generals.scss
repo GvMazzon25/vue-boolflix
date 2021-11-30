@@ -8,4 +8,16 @@
         margin: auto;
         background-color: rgba(29, 45, 60, 1);
     }
+    main{
+        width: 100%;
+        .film{
+            width: 50%;
+            display: inline-block;
+        }
+        .serie{
+            width: 50%;
+            display: inline-block;
+            text-align: end;
+        }
+    }
 }
