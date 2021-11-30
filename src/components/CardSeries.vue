@@ -1,8 +1,8 @@
 <template>
   <section class="box">
           <ul>
-                <li><h3>Titolo: {{ title }}</h3></li>
-                <li>Titolo Originale: {{ originalTitle }}</li>
+                <li><h3>Titolo: {{ name }}</h3></li>
+                <li>Titolo Originale: {{ originalName }}</li>
                 <li>
                     Lingua: 
                     <img 
@@ -21,8 +21,8 @@
 export default {
     name: 'CardSeries',
     props: {
-        title: String,
-        originalTitle: String,
+        name: String,
+        originalName: String,
         language: String,
         vote: Number,
     },
