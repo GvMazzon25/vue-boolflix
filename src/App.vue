@@ -1,6 +1,6 @@
 <template>
 <div class="app">
-  <Header />
+  <Header @search="performSearch"/>
   <CardList  
      :list="movieList"
   />
@@ -29,9 +29,9 @@ export default {
 
       if (searchText !== '') {
          axios
-             .get('https://api.themoviedb.org/3/search/movie', {
+             .get('https://api.themoviedb.org/3/search/movie?', {
                   params: {
-                    api_key:'e99307154c6dfb0b4750f6603256716',
+                    api_key:'e99307154c6dfb0b4750f6603256716d',
                     query: searchText,
                     language:'it-IT',
                 },
