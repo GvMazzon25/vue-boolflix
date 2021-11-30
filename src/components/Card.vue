@@ -24,7 +24,7 @@
 export default {
     name: 'Card',
     props: {
-        image: Image,
+        image: String,
         title: String,
         originalTitle: String,
         language: String,
@@ -45,4 +45,15 @@ export default {
 
 <style scope lang='scss'>
   @import '@/style/main.scss';
+  .img-box{
+           width: 100px;
+           height: 100px;
+           background-color: black;
+           img{
+               width: 100%;
+               height: 100%;
+               background-repeat: no-repeat;
+               background-size: contain;
+           }
+       }
 </style>
