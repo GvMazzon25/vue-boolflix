@@ -14,11 +14,19 @@
         .film{
             width: 50%;
             height: 90vh;
+            h2{
+                margin-bottom: 10px;
+                color: orange;
+            }
         }
         .serie{
             width: 50%;
             height: 90vh; 
             text-align: end;
+            h2{
+                margin-bottom: 10px;
+                color: orange;
+            }
         }
         .hide{
             display: none;

@@ -2,6 +2,9 @@
   <section class="box">
           <ul>
                 <li><h3>Titolo: {{ name }}</h3></li>
+                <li>
+                    <img :src="image" :alt="originalName">
+                </li>
                 <li>Titolo Originale: {{ originalName }}</li>
                 <li>
                     Lingua: 
@@ -21,6 +24,7 @@
 export default {
     name: 'CardSeries',
     props: {
+        image: Image,
         name: String,
         originalName: String,
         language: String,

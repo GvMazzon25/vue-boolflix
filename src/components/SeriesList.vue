@@ -5,7 +5,8 @@
        :key="item.id"
   >
     <CardSeries 
-         :name='item.title'
+         :image='item.poster_path'
+         :name='item.name'
          :originalName='item.original_name'
          :language='item.original_language'
          :vote='item.popularity'
