@@ -3,7 +3,15 @@
           <ul>
                 <li><h3>Titolo: {{ title }}</h3></li>
                 <li>Titolo Originale: {{ originalTitle }}</li>
-                <li>Lingua: {{ language }}</li>
+                <li>
+                    Lingua: 
+                    <img 
+                        v-if="isFlag"
+                        :src="require(`../assets/${language}.png`)" 
+                        :alt="language"
+                    />
+                    <span v-else>{{ language }}</span>
+                </li>
                 <li>Voto: {{ vote }}</li>
           </ul>
   </section>
@@ -17,10 +25,20 @@ export default {
         originalTitle: String,
         language: String,
         vote: Number,
+    },
+    data() {
+        return {
+            availableFlags: ['it','en'],
+        };
+    },
+    computed: {
+        isFlag() {
+            return this.availableFlags.includes(this.language)
+        }
     }
-}
+};
 </script>
 
-<style lang='scss'>
+<style scope lang='scss'>
   @import '@/style/main.scss';
 </style>

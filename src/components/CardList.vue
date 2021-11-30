@@ -7,7 +7,7 @@
     <Card 
          :title='item.title'
          :originalTitle='item.original_title'
-         :originalLanguage='item.original_language'
+         :language='item.original_language'
          :vote='item.popularity'
     />
   </div>
