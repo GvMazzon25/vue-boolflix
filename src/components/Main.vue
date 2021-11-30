@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 import Card from '@/components/Card.vue'
 
 export default {

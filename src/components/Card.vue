@@ -1,11 +1,16 @@
 <template>
-  <div>
-        <ul>
-              <li><h3>Titolo: {{title}}</h3></li>
-              <li>Titolo Originale: {{originalTitle}}</li>
-              <li>Lingua: {{originalLanguage}}</li>
-              <li>Voto: {{vote}}</li>
-        </ul>
+  <div class="card" 
+       v-for="item in list"
+       :key="item.id"
+  >
+    <div class="box">
+          <ul>
+                <li><h3>Titolo: {{ item.title }}</h3></li>
+                <li>Titolo Originale: {{ item.originalTitle }}</li>
+                <li>Lingua: {{ item.originalLanguage }}</li>
+                <li>Voto: {{ item.vote }}</li>
+          </ul>
+    </div>
   </div>
 </template>
 
@@ -13,10 +18,8 @@
 export default {
     name: 'Card',
     props: {
-        title: String,
-        originalTitle: String,
-        originalLanguage: String,
-        vote: Number,
+        list: Array,
+
     }
 }
 </script>
@@ -24,3 +27,4 @@ export default {
 <style lang='scss'>
   @import '@/style/main.scss';
 </style>
+
