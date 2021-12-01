@@ -6,13 +6,13 @@
       <h2>Film</h2>
     <CardList  
      :list1="movieList"
-  />
-  </section>
-  <section class="serie">
-    <h2>Serie TV</h2>
-    <SeriesList  
-     :list2="seriesList"
-  />
+    />
+    </section>
+    <section class="serie">
+      <h2>Serie TV</h2>
+      <SeriesList  
+      :list2="seriesList"
+    />
   </section>
   </main>
 </div>

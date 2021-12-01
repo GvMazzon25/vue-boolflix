@@ -1,15 +1,20 @@
 <template>
   <section class="box">
-      <img 
+      <div class="img-box">
+           <img  
+            class="poster"
             v-if="poster"
            :src="`https://image.tmdb.org/t/p/w342${poster}`" 
            :alt="title"
-       />
+      />
       <img 
+           class="poster"
            v-else
            src="https://www.altavod.com/assets/images/poster-placeholder.png" 
            :alt="title"
       />
+      </div>
+      <div class="list-box">
           <ul>
                 <li><h3>Titolo: {{ name }}</h3></li>
                 <li>Titolo Originale: {{ originalName }}</li>
@@ -24,6 +29,7 @@
                 </li>
                 <li>Voto: {{ vote }}</li>
           </ul>
+      </div>
   </section>
 </template>
 
@@ -51,7 +57,5 @@ export default {
 </script>
 
 <style scope lang='scss'>
-  li{
-      list-style: none;
-  }
+  @import '@/style/main.scss';
 </style>

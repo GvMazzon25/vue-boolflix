@@ -1,12 +1,16 @@
 <template>
   <header>
-      <h2>Boolflix</h2>
+    <div class="title-section">
+       <h2>Boolflix</h2>
+    </div>
+    <div class="input-section">
       <input type="text" 
              placeholder="Search a movie" 
              v-model.trim="searchText" 
              @keyup.enter="$emit('search', searchText)"
       />
       <button @click="$emit('search', searchText)">Search</button>
+    </div> 
   </header>
 </template>
 
