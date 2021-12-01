@@ -25,7 +25,6 @@
                 <li><h3>Titolo: {{ title }} </h3></li>
                 <li>Titolo Originale: {{ originalTitle }}</li>
                 <li>
-                    Lingua: 
                     <img 
                         v-if="isFlag"
                         :src="require(`../assets/${language}.png`)" 
@@ -33,7 +32,7 @@
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li>Voto: {{ vote }}</li>
+                <li>Voto:{{ vote }}</li>
           </ul>
           
       </div>
