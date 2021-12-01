@@ -1,5 +1,8 @@
 <template>
-  <section class="box">
+  <section class="box"
+           @mouseover="hover = true"
+           @mouseleave="hover = false"
+  >
       <div class="img-box">
            <img  
             class="poster"
@@ -14,9 +17,12 @@
            :alt="title"
       />
       </div>
-      <div class="list-box">
+      <div 
+           class="list-box"
+           :class="{active: hover}"
+      >
           <ul>
-                <li><h3>Titolo: {{ title }}</h3></li>
+                <li><h3>Titolo: {{ title }} </h3></li>
                 <li>Titolo Originale: {{ originalTitle }}</li>
                 <li>
                     Lingua: 
@@ -29,6 +35,7 @@
                 </li>
                 <li>Voto: {{ vote }}</li>
           </ul>
+          
       </div>
   </section>
 </template>
@@ -46,6 +53,7 @@ export default {
     data() {
         return {
             availableFlags: ['it','en'],
+            hover: false,
         };
     },
     computed: {
