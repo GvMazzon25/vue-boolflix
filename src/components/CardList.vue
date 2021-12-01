@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="flex">
   <div class="card" 
        v-for="item in list1"
        :key="item.id"
@@ -9,7 +9,7 @@
          :title='item.title'
          :originalTitle='item.original_title'
          :language='item.original_language'
-         :vote='item.popularity'
+         :vote='item.vote_average'
     />
   </div>
 </section>
@@ -30,6 +30,13 @@ export default {
 </script>
 
 <style lang='scss'>
-
+   .flex{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     .card{
+       margin: 20px;
+     }
+   }
 </style>
 

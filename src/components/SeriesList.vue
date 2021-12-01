@@ -1,17 +1,17 @@
 <template>
-  <section>
-  <div class="card" 
-       v-for="item in list2"
-       :key="item.id"
-  >
-    <CardSeries 
-         :poster='item.poster_path'
-         :name='item.name'
-         :originalName='item.original_name'
-         :language='item.original_language'
-         :vote='item.popularity'
-    />
-  </div>
+  <section class="flex">
+    <div class="card" 
+        v-for="item in list2"
+        :key="item.id"
+    >
+      <CardSeries 
+          :poster='item.poster_path'
+          :name='item.name'
+          :originalName='item.original_name'
+          :language='item.original_language'
+          :vote='item.vote_average'
+      />
+    </div>
 </section>
 </template>
 
@@ -32,8 +32,9 @@ export default {
 </script>
 
 <style scope lang="scss">
-   .card{
-       position: relative;
-       top: 0;
+   .flex{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
    }
 </style>

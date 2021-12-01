@@ -2,7 +2,7 @@
   <section class="box">
       <img 
             v-if="poster"
-           :src="`https://image.tmbd.org/t/p/w342${poster}`" 
+           :src="`https://image.tmdb.org/t/p/w342${poster}`" 
            :alt="title"
       />
       <img 
