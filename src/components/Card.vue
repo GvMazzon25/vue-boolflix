@@ -1,10 +1,17 @@
 <template>
   <section class="box">
+      <img 
+            v-if="poster"
+           :src="`https://image.tmbd.org/t/p/w342${poster}`" 
+           :alt="title"
+      />
+      <img 
+           v-else
+           src="https://www.altavod.com/assets/images/poster-placeholder.png" 
+           :alt="title"
+      />
           <ul>
                 <li><h3>Titolo: {{ title }}</h3></li>
-                <li class="img-box">
-                    <img :src="image" :alt="originalTitle">
-                </li>
                 <li>Titolo Originale: {{ originalTitle }}</li>
                 <li>
                     Lingua: 
@@ -24,7 +31,7 @@
 export default {
     name: 'Card',
     props: {
-        image: String,
+        poster: String,
         title: String,
         originalTitle: String,
         language: String,
@@ -45,15 +52,4 @@ export default {
 
 <style scope lang='scss'>
   @import '@/style/main.scss';
-  .img-box{
-           width: 100px;
-           height: 100px;
-           background-color: black;
-           img{
-               width: 100%;
-               height: 100%;
-               background-repeat: no-repeat;
-               background-size: contain;
-           }
-       }
 </style>
