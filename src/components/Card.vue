@@ -32,7 +32,10 @@
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li>Voto:{{ vote }}</li>
+                <li>Voto: {{ vote }}</li>
+                <li class="over">
+                    <div>Overview: {{ overview }}</div> 
+                </li>
           </ul>
           
       </div>
@@ -48,6 +51,7 @@ export default {
         originalTitle: String,
         language: String,
         vote: Number,
+        overview: String
     },
     data() {
         return {

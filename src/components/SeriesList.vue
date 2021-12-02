@@ -10,6 +10,7 @@
           :originalName='item.original_name'
           :language='item.original_language'
           :vote='item.vote_average'
+          :overview='item.overview'
       />
     </div>
 </section>

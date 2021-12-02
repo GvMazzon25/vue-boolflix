@@ -10,6 +10,7 @@
          :originalTitle='item.original_title'
          :language='item.original_language'
          :vote='item.vote_average'
+         :overview='item.overview'
     />
   </div>
 </section>
@@ -25,6 +26,9 @@ export default {
     },
     props: {
         list1: Array,
+    },
+    methods: {
+      }
     }
 }
 </script>

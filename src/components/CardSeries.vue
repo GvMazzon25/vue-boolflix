@@ -1,5 +1,8 @@
 <template>
-  <section class="box">
+  <section class="box"
+           @mouseover="hover = true"
+           @mouseleave="hover = false"
+  >
       <div class="img-box">
            <img  
             class="poster"
@@ -14,12 +17,13 @@
            :alt="title"
       />
       </div>
-      <div class="list-box">
+      <div class="list-box"
+           :class="{active: hover}"
+      >
           <ul>
                 <li><h3>Titolo: {{ name }}</h3></li>
                 <li>Titolo Originale: {{ originalName }}</li>
                 <li>
-                    Lingua: 
                     <img 
                         v-if="isFlag"
                         :src="require(`../assets/${language}.png`)" 
@@ -28,6 +32,9 @@
                     <span v-else>{{ language }}</span>
                 </li>
                 <li>Voto: {{ vote }}</li>
+                <li class="over">
+                    <div>Overview: {{ overview }}</div> 
+                </li>
           </ul>
       </div>
   </section>
@@ -41,10 +48,12 @@ export default {
         originalName: String,
         language: String,
         vote: Number,
+        overview: String
     },
     data() {
         return {
             availableFlags: ['it','en'],
+            hover: false,
         };
     },
     computed: {
