@@ -32,7 +32,13 @@
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li>Voto: {{ vote }}</li>
+                <li>
+                    <i 
+                       v-for="index in Math.round(vote/2)" 
+                       :key="index"
+                       class="fa-solid fa-star yellow"
+                    >
+                    </i>
                 <li class="over">
                     <div>Overview: {{ overview }}</div> 
                 </li>

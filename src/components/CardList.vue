@@ -28,7 +28,7 @@ export default {
         list1: Array,
     },
     methods: {
-      }
+      
     }
 }
 </script>
